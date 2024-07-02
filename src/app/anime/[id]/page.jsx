@@ -8,7 +8,7 @@ const Page = async({params: {id}}) => {
             <div className="p-3">
                 <h3 className="text-color-primary text-2xl">{animeDetail.data.title}</h3>
                 {animeDetail && animeDetail.data.year ?
-                <h4 className="text-color-primary text-2xl">Anime Realese - {animeDetail.data.year}</h4>
+                <h4 className="text-color-primary text-xl">Anime Realese - {animeDetail.data.year}</h4>
                 :
                 null
                 }
