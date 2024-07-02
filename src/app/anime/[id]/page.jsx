@@ -6,7 +6,7 @@ const Page = async({params: {id}}) => {
     return (
         <>
             <div className="p-3">
-                <h3 className="text-color-primary text-2xl">{animeDetail.data.title} - {animeDetail.data.year}</h3>
+                <h3 className="text-color-primary text-2xl">{animeDetail.data.title}</h3>
             </div>
             <div className="p-3 flex gap-3 text-color-primary overflow-x-auto">
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
