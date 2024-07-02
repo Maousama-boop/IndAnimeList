@@ -46,7 +46,7 @@ const Page = async({params: {id}}) => {
             <p className="text-justify text-xl">{animeDetail.data.synopsis}</p>
             </div>
             <div>
-            <link href="/">
+            <Link href="/">
             <ArrowLeft size={32} />Kembali</Link>
             </div>
         </>
