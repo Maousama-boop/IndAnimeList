@@ -19,10 +19,6 @@ const Page = async({params: {id}}) => {
             <p>{animeDetail.data.rank}</p>
             </div>
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
-            <h3>Episode</h3>
-            <p>{animeDetail.data.episodes}</p>
-            </div>
-            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>rating</h3>
             <p>{animeDetail.data.score}</p>
             </div>
@@ -33,6 +29,14 @@ const Page = async({params: {id}}) => {
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>favorit</h3>
             <p>{animeDetail.data.favorites}</p>
+            </div>
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
+            <h3>Episode</h3>
+            <p>{animeDetail.data.episodes}</p>
+            </div>
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
+            <h3>durasi</h3>
+            <p>{animeDetail.data.duration}</p>
             </div>
             </div>
             <div className="p-3 flex sm:flex-nowrap flex-wrap gap-3 text-color-primary font-semibold">
