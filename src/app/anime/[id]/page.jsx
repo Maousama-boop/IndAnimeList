@@ -35,8 +35,8 @@ const Page = async({params: {id}}) => {
             <p>{animeDetail.data.favorites}</p>
             </div>
             </div>
-            <div className="p-3 flex flex-wrap gap-3 text-color-primary font-semibold">
-            <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full sm:flex-nowrap flex-wrap"/>
+            <div className="p-3 flex sm:flex-nowrap flex-wrap gap-3 text-color-primary font-semibold">
+            <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full"/>
             <p className="text-justify text-xl">{animeDetail.data.synopsis}</p>
             </div>
         </>
