@@ -8,7 +8,7 @@ const Page = async({params: {id}}) => {
             <div className="p-3">
                 <h3 className="text-color-primary text-2xl">{animeDetail.data.title} - {animeDetail.data.year}</h3>
             </div>
-            <div className="p-3 flex">
+            <div className="p-3 flex sm:flex-nowrap flex-wrap">
             <Image src={} />
             </div>
         </>
