@@ -13,7 +13,7 @@ const Page = async({params: {id}}) => {
                 null
                 }
             </div>
-            <div className="p-3 flex gap-3 text-color-primary overflow-x-auto">
+            <div className="p-3 flex gap-3 text-color-primary overflow-x-auto capitalize">
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>Rank</h3>
             <p>{animeDetail.data.rank}</p>
@@ -25,6 +25,18 @@ const Page = async({params: {id}}) => {
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>Genre</h3>
             <p>{animeDetail.data.genres[0].name}</p>
+            </div>
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
+            <h3>score</h3>
+            <p>{animeDetail.data.score}</p>
+            </div>
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
+            <h3>populer</h3>
+            <p>{animeDetail.data.popularity}</p>
+            </div>
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
+            <h3>favorit</h3>
+            <p>{animeDetail.data.favorites}</p>
             </div>
             </div>
             <div className="p-3 flex sm:flex-nowrap flex-wrap gap-3 text-color-primary">
