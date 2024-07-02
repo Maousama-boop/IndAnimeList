@@ -5,7 +5,7 @@ const Page = async({params: {id}}) => {
     console.log(animeDetail)
     return (
         <>
-            <div>
+            <div className="p>
                 <h3 className="text-color-primary text-2xl">Anime Detail</h3>
             </div>
         </>
