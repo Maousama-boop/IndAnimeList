@@ -13,6 +13,10 @@ const Page = async({params: {id}}) => {
             <h3>Rank</h3>
             <p>{animeDetail.data.rank}</p>
             </div>
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
+            <h3>Genre</h3>
+            <p>{animeDetail.data.genres.name}</p>
+            </div>
             </div>
             <div className="p-3 flex sm:flex-nowrap flex-wrap gap-3 text-color-primary">
             <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full"/>
