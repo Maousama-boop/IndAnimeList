@@ -13,7 +13,7 @@ const Page = async({params: {id}}) => {
                 null
                 }
             </div>
-            <div className="p-3 flex gap-3 text-color-primary overflow-x-auto capitaliz">
+            <div className="p-3 flex gap-3 text-color-primary overflow-x-auto capitaliz no-scrollbar">
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>Rank</h3>
             <p>{animeDetail.data.rank}</p>
