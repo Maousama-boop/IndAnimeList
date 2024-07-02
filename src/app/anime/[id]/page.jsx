@@ -1,7 +1,7 @@
 import { getAnimeResponse } from "../../libs/api-libs"
 import Image from "next/image"
 import Link from "next/link"
-import { MagnifyingGlass } from "@phosphor-icons/react"
+import { ArrowLeft } from "@phosphor-icons/react"
 
 const Page = async({params: {id}}) => {
     const animeDetail = await getAnimeResponse(`anime/${id}`)
