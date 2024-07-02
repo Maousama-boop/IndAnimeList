@@ -45,7 +45,7 @@ const Page = async({params: {id}}) => {
             <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full"/>
             <p className="text-justify text-xl">{animeDetail.data.synopsis}</p>
             </div>
-            <div>
+            <div className="flex justify-end">
             <Link href="/">
             <ArrowLeft size={32} />Kembali</Link>
             </div>
