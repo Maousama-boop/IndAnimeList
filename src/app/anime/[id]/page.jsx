@@ -9,7 +9,7 @@ const Page = async({params: {id}}) => {
                 <h3 className="text-color-primary text-2xl">{animeDetail.data.title} - {animeDetail.data.year}</h3>
             </div>
             <div className="p-3 flex gap-3 text-color-primary overflow-x-auto">
-            <div className="w-36 flex flex-col justify-center items-center rounded border-4 border-color-accent p-2">
+            <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>Rank</h3>
             <p>{animeDetail.data.rank}</p>
             </div>
