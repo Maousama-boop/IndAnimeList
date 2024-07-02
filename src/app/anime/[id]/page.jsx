@@ -27,8 +27,8 @@ const Page = async({params: {id}}) => {
             <p>{animeDetail.data.score}</p>
             </div>
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
-            <h3>rating</h3>
-            <p>{animeDetail.data.rating}</p>
+            <h3>member</h3>
+            <p>{animeDetail.data.members}</p>
             </div>
             <div className="w-36 flex flex-col justify-center items-center rounded border-2 border-color-accent p-2">
             <h3>favorit</h3>
