@@ -8,11 +8,11 @@
     box-sizing: border-box;
 }
 
-img{
+.anime{
     transition: .3s ease all;
 }
 
-img:hover{
+.anime:hover{
     scale: 105%;
 }
 
