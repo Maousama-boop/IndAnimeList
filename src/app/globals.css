@@ -42,8 +42,3 @@ img:hover{
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
-.arrow-left::after {
-    content: "\e5c4";
-    font-family: "Material Symbols Rounded";
-}
