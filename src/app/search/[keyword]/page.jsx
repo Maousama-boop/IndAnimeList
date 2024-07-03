@@ -9,12 +9,8 @@ const Page = async ({ params }) => {
   return (
     <>
       <section>
-      {decodedKeyword ? (
         <Header title={`Pencarian '${decodedKeyword}'`}/>
         <IndAnimeList api={searchAnime}/>
-        ) : (
-        <Header title={`Pencarian '${decodedKeyword}' Tidak Di Temukan.`}/>
-          )}
       </section>
     </>
   );
