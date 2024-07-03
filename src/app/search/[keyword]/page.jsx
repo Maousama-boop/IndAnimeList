@@ -14,7 +14,7 @@ const Page = async ({ params }) => {
         <IndAnimeList api={searchAnime}/>
         ) : (
         <Header title={`Pencarian '${decodedKeyword}' Tidak Di Temukan.`}/>
-          )
+          )}
       </section>
     </>
   );
