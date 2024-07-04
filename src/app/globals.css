@@ -12,7 +12,7 @@
     transition: .3s ease all;
 }
 
-.anime:hover{
+.anime:hover .anime img{
     scale: 105%;
 }
 
