@@ -4,6 +4,7 @@ import Link from "next/link"
 
 const Page = async({params: {id}}) => {
     const animeCharacter = await getAnimeResponse(`characters/${id}`)
+    const animeDetail = await getAnimeResponse(`characters/${id}/anime`)
     return (
         <>
             <div className="p-3 pb-0 font-semibold">
@@ -18,6 +19,7 @@ const Page = async({params: {id}}) => {
             <Image src={animeCharacter.data.images.webp.image_url} alt={animeCharacter.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full h-full"/>
             <p className="text-justify sm:text-base text-xl">{animeCharacter.data.about}</p>
             </div>
+            <Image src={animeDetail.data.anime.images.webp.image_url} />
         </>
     )
 }
