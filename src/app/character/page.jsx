@@ -22,7 +22,7 @@ const CharacterPopuler = () => {
     return (
         <>
             <HeaderPopuler title={`Character Populer #${page}`}/>
-            <IndAnimeList api={topCharacter}/>
+            <IndCharacterList api={topCharacter}/>
             <Pagination page={page} lastPage={topCharacter.pagination?.last_visible_page} setPage={setPage}/> 
         </>
     )
