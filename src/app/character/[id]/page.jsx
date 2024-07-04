@@ -19,7 +19,7 @@ const Page = async({params: {id}}) => {
             <Image src={animeCharacter.data.images.webp.image_url} alt={animeCharacter.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full h-full"/>
             <p className="text-justify sm:text-base text-xl">{animeCharacter.data.about}</p>
             </div>
-            <Image src={animeDetail.data.anime.images.webp.image_url} />
+            <p className="text-color-primary">{animeDetail.role}</p>
         </>
     )
 }
