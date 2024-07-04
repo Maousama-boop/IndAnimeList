@@ -16,6 +16,10 @@
     scale: 105%;
 }
 
+.overlay{
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .loading {
     width:100px;
     height:100px;
