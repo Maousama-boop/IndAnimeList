@@ -1,4 +1,4 @@
-import IndAnimeList from "../components/IndAnimeList"
+import IndAnimeList, IndCharacterList from "../components/IndAnimeList"
 import Header from "../components/IndAnimeList/Header"
 import { getAnimeResponse } from "./libs/api-libs"
 
@@ -14,7 +14,7 @@ const Page = async () => {
       </section>
       <section>
         <Header title="Character Populer" linkTitle="Lihat Semua" linkHref="/character"/>
-        <IndAnimeList api={topCharacter}/>
+        <IndCharacterList api={topCharacter}/>
       </section>
     </>
   );
