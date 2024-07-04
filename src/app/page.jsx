@@ -9,11 +9,11 @@ const Page = async () => {
   return (
     <>
       <section>
-        <Header title="Anime Populer" linkTitle="Lihat Semua" linkHref="/populer"/>
+        <Header title="Anime Populer" linkTitle="Lihat Semua" linkHref="/populer/anime"/>
         <IndAnimeList api={topAnime}/>
       </section>
       <section>
-        <Header title="Character Populer" linkTitle="Lihat Semua" linkHref="/character"/>
+        <Header title="Character Populer" linkTitle="Lihat Semua" linkHref="/populer/character"/>
         <IndCharacterList api={topCharacter}/>
       </section>
     </>
