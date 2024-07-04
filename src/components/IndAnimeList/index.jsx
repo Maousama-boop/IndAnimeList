@@ -21,7 +21,7 @@ const IndCharacterList = ({api}) => {
             {api.data?.map((character, index) => {
                 return (
                     <Link href={`/characters/${character.mal_id}`}className="cursor-pointer text-color-primary hover:text-color-accent transition-all" key={index}>
-                        <Image src={character.images.webp.image_url} width={350} height={350} className="w-full max-h-full max-h-64 md:max-h-72 object-cover anime"/>
+                        <Image src={character.images.webp.image_url} width={350} height={350} className="w-full h-full max-h-64 md:max-h-72 object-cover anime"/>
                         <h3 className="font-bold md:text-x text-md p-2 text-center title-anime">{character.name}</h3>
                     </Link>
                 )    
