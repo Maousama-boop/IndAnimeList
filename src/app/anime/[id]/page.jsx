@@ -4,6 +4,7 @@ import Link from "next/link"
 
 const Page = async({params: {id}}) => {
     const animeDetail = await getAnimeResponse(`anime/${id}`)
+    const animeCharacter = await getAnimeResponse(`anime/${id}/characters`)
     return (
         <>
             <div className="p-3 pb-0 font-semibold">
@@ -18,7 +19,14 @@ const Page = async({params: {id}}) => {
             <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full h-full"/>
             <p className="text-justify sm:text-base text-xl">{animeDetail.data.synopsis}</p>
             </div>
-            <Link href="/" className="text-l text-color-primary p-3 hover:text-color-accent">kembali</Link>
+            <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 px-3">
+                    <Link href={`/character/${anime.mal_id}`}className="relative overflow-hidden cursor-pointer text-color-primary hover:text-color-accent transition-all anime">
+                        <Image src={character.data.character.images.webp.image_url} width={350} height={350} className="w-full h-full object-cover"/>
+                        <div className="absolute bottom-0 w-full text-center p-2 box-border overlay">
+                          <h3 className="font-bold md:text-x text-md text-start  pb-0 whitespace-nowrap overflow-hidden text-ellipsis">{character.name}</h3>
+                        </div>
+                    </Link>
+            </div>
         </>
     )
 }
