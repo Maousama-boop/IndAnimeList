@@ -12,7 +12,7 @@ const CharacterPopuler = () => {
 
     const fetchData = async() => {
         const populerCharacter = await getAnimeResponse("top/characters", `page=${page}`)
-        setTopAnime(populerCharacter)
+        setTopCharacter(populerCharacter)
     }
 
     useEffect(() => {
