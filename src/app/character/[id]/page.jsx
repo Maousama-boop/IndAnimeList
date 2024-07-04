@@ -9,7 +9,7 @@ const Page = async({params: {id}}) => {
             <div className="p-3 pb-0 font-semibold">
                 <h3 className="text-color-primary text-2xl">{animeCharacter.data.name}</h3>
                 {animeCharacter && animeCharacter.data.name_kanji ?
-                <h4 className="text-color-primary text-l">Kanji - {animeCharacter.data.name_kanji}</h4>
+                <h4 className="text-color-primary text-l">nama jepang - {animeCharacter.data.name_kanji}</h4>
                 :
                 null
                 }
