@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import HeaderPopuler from "../../components/Utilities/HeaderPopuler"
 import Pagination from "../../components/Utilities/Pagination"
-import IndAnimeList from "../../components/IndAnimeList"
+import { IndAnimeList, IndCharacterList } from "../../components/IndAnimeList"
 import { getAnimeResponse } from "../libs/api-libs"
 
 const Populer = () => {
