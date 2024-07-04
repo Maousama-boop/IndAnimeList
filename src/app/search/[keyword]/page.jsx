@@ -1,4 +1,4 @@
-import IndAnimeList from "../../../components/IndAnimeList"
+import { IndAnimeList, IndCharacterList } from "../../../components/IndAnimeList"
 import Header from "../../../components/IndAnimeList/Header"
 import { getAnimeResponse } from "../../libs/api-libs"
 
