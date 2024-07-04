@@ -29,4 +29,4 @@ const IndCharacterList = ({api}) => {
         </div>
     )
 }
-export default { IndAnimeList, IndCharacterList }
+export { IndAnimeList, IndCharacterList }
