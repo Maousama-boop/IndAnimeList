@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import HeaderPopuler from "../../components/Utilities/HeaderPopuler"
-import Pagination from "../../components/Utilities/Pagination"
-import { IndAnimeList, IndCharacterList } from "../../components/IndAnimeList"
-import { getAnimeResponse } from "../libs/api-libs"
+import HeaderPopuler from "../../../components/Utilities/HeaderPopuler"
+import Pagination from "../../../components/Utilities/Pagination"
+import { IndAnimeList, IndCharacterList } from "../../../components/IndAnimeList"
+import { getAnimeResponse } from "../../libs/api-libs"
 
 const CharacterPopuler = () => {
     const [page, setPage] = useState(1)
