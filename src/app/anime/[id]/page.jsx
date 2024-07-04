@@ -38,7 +38,7 @@ const Page = async({params: {id}}) => {
             </div>
             <div className="p-3 flex sm:flex-nowrap flex-wrap gap-3 text-color-primary font-semibold">
             <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-full h-full"/>
-            <p className="text-justify text-xl">{animeDetail.data.synopsis}</p>
+            <p className="text-justify sm:text-base text-xl">{animeDetail.data.synopsis}</p>
             </div>
             <Link href="/" className="text-l text-color-primary p-3 hover:text-color-accent">kembali</Link>
         </>
