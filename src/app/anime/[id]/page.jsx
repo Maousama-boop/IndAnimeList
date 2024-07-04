@@ -4,6 +4,8 @@ import Link from "next/link"
 
 const Page = async({params: {id}}) => {
     const animeDetail = await getAnimeResponse(`anime/${id}`)
+    const animeCharacter = await getAnimeResponse(`anime/${id}/characters`)
+    console.log(animeCharacter)
     return (
         <>
             <div className="p-3 pb-0 font-semibold">
