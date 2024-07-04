@@ -6,7 +6,7 @@ import Pagination from "../../components/Utilities/Pagination"
 import { IndAnimeList, IndCharacterList } from "../../components/IndAnimeList"
 import { getAnimeResponse } from "../libs/api-libs"
 
-const Populer = () => {
+const AnimePopuler = () => {
     const [page, setPage] = useState(1)
     const [topAnime, setTopAnime] = useState([])
 
@@ -28,4 +28,4 @@ const Populer = () => {
     )
 }
 
-export default Populer
+export default AnimePopuler
