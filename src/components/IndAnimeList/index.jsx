@@ -21,7 +21,7 @@ const IndAnimeList = ({api}) => {
 const IndCharacterList = ({api}) => {
     return (
         <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 px-3">
-            {api.data.character?.map((character, index) => {
+            {api.data?.map((character, index) => {
                 return (
                     <Link href={`/character/${character.mal_id}`}className="relative overflow-hidden cursor-pointer text-color-primary hover:text-color-accent transition-all anime" key={index}>
                         <Image src={character.images.webp.image_url} width={350} height={350} className="w-full h-full object-cover"/>
