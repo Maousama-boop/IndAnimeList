@@ -27,11 +27,11 @@ const InputSearch = () => {
              <button className="absolute top-2 end-2" onClick={handleSearch}>
                 <MagnifyingGlass size={24} />
              </button>
-             {searchRef.current.value && (
+
              <button className="absolute top-2 end-10" onClick={hapusPencarian}>
                 <X size={24} />
              </button>
-             )}
+
         </div>
     )
 }
