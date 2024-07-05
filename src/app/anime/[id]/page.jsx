@@ -6,19 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Page = ({params: {id}}) => {
-    const [animeDetail, setAnimeDetail] = useState(null)
-    const [animeCharacter, setAnimeCharacter] = useState([])
-
-      const fetchData = async() => {
-      const animeDetailResponse = await getAnimeResponse(`anime/${id}`)
-      setAnimeDetail(animeDetailResponse)
-      
-      const animeCharacterResponse = await getAnimeResponse(`anime/${id}/characters`)
-      setAnimeCharacter(animeCharacterResponse)
-      }    
-    useEffect(() => {
-      fetchData()
-    }, [id])
+  const animeDetail = await getAnimeResponse(`anime/${id}`)
     return (
         <>
             <div className="p-3 pb-0 font-semibold">
