@@ -33,9 +33,7 @@ const Page = ({params: {id}}) => {
             <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-48 md:w-56 h-full"/>
             <p className="text-justify sm:text-x text-sm">{animeDetail.data.synopsis}</p>
             </div>
-            {animeCharacter.data?.character.map((characterAnime) => {
-              <p className="text-xl text-color-primary">{characterAnime.name}</p>
-            })}
+              <p className="text-xl text-color-primary">{animeCharacter.data.character.name}</p>
         </>
     )
 }
