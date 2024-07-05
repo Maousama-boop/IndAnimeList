@@ -1,11 +1,8 @@
-"use client"
-
-import { useEffect, useState } from "react"
 import { getAnimeResponse } from "../../libs/api-libs"
 import Image from "next/image"
 import Link from "next/link"
 
-const Page = ({params: {id}}) => {
+const Page = async({params: {id}}) => {
   const animeDetail = await getAnimeResponse(`anime/${id}`)
     return (
         <>
