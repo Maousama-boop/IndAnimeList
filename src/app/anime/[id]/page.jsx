@@ -5,7 +5,7 @@ import { getAnimeResponse } from "../../libs/api-libs"
 import Image from "next/image"
 import Link from "next/link"
 
-const Page = async({params: {id}}) => {
+const Page = ({params: {id}}) => {
     const [animeDetail, setAnimeDetail] = useState([])
     const [animeCharacter, setAnimeCharacter] = useState([])
 
