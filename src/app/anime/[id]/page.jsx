@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { getAnimeResponse } from "../../libs/api-libs"
 import Image from "next/image"
