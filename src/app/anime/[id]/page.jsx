@@ -6,17 +6,17 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Page = async({params: {id}}) => {
-    const [animeDetail, setAnimeDetail] = useState(null)
-    const [animeCharacter, setAnimeCharacter] = useState(null)
-    
-    useEffect(() => {
+    const [animeDetail, setAnimeDetail] = useState([])
+    const [animeCharacter, setAnimeCharacter] = useState([])
+
       const fetchData = async() => {
       const animeDetailResponse = await getAnimeResponse(`anime/${id}`)
       setAnimeDetail(animeDetailResponse)
       
       const animeCharacterResponse = await getAnimeResponse(`anime/${id}/characters`)
       setAnimeCharacter(animeCharacterResponse)
-      }
+      }    
+    useEffect(() => {
       fetchData()
     }, [id])
     return (
