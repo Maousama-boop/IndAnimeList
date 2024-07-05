@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react"
 import { getAnimeResponse } from "../../libs/api-libs"
 import Image from "next/image"
 import Link from "next/link"
 
 const Page = async({params: {id}}) => {
-    const animeDetail = await getAnimeResponse(`anime/${id}`)
-    const animeCharacter = await getAnimeResponse(`anime/${id}/characters`)
+    const [animeDetail, setAnimeDetail] = useState(null)
+    const [animeCharacter, setAnimeCharacter] = useState(null)
+    
+    useEffect(() => {
+      const fetchData = async() => {
+      const animeDetailResponse = await getAnimeResponse(`anime/${id}`)
+      setAnimeDetail(animeDetailResponse)
+      
+      const animeCharacterResponse = await getAnimeResponse(`anime/${id}/characters`)
+      setAnimeCharacter(animeCharacterResponse)
+      }
+      fetchData()
+    }, [id])
     return (
         <>
             <div className="p-3 pb-0 font-semibold">
@@ -19,6 +31,9 @@ const Page = async({params: {id}}) => {
             <Image src={animeDetail.data.images.webp.image_url} alt={animeDetail.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded w-48 md:w-56 h-full"/>
             <p className="text-justify sm:text-x text-sm">{animeDetail.data.synopsis}</p>
             </div>
+            {animeCharacter.data.character.map((character) => {
+              <p className="text-xl text-color-primary">{character.name}</p>
+            })}
         </>
     )
 }
