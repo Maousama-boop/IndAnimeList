@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Page = ({params: {id}}) => {
-    const [animeDetail, setAnimeDetail] = useState([])
+    const [animeDetail, setAnimeDetail] = useState(null)
     const [animeCharacter, setAnimeCharacter] = useState([])
 
       const fetchData = async() => {
