@@ -40,7 +40,7 @@ const InputSearch = () => {
                     <button className="p-2 rounded-l" onClick={() => handleSearchTypeChange(searchType === "anime" ? "character" : "anime")}>
                         {searchType === "anime" ? "Anime" : "Character"}
                     </button>
-                    <div className="absolute top-12 left-0 w-full bg-white shadow-md rounded">
+                    <div className="absolute top-12 left-0 w-full bg-white shadow-md rounded hidden">
                         <button className="w-full text-left p-2" onClick={() => handleSearchTypeChange("anime")}>Anime</button>
                         <button className="w-full text-left p-2" onClick={() => handleSearchTypeChange("character")}>Character</button>
                     </div>
