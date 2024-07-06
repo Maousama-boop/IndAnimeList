@@ -34,15 +34,15 @@ const InputSearch = () => {
     }
 
     return (
-        <div className="relative text-color-dark">
+        <div className="relative text-color-dark bg-color-primary">
             <div className="flex">
                 <div className="relative">
-                    <button className="p-2 bg-color-primary rounded-l" onClick={() => handleSearchTypeChange(searchType === "anime" ? "character" : "anime")}>
+                    <button className="p-2 rounded-l" onClick={() => handleSearchTypeChange(searchType === "anime" ? "character" : "anime")}>
                         {searchType === "anime" ? "Anime" : "Character"}
                     </button>
                     <div className="absolute top-12 left-0 w-full bg-white shadow-md rounded">
-                        <button className="w-full text-left p-2 hover:bg-gray-100" onClick={() => handleSearchTypeChange("anime")}>Anime</button>
-                        <button className="w-full text-left p-2 hover:bg-gray-100" onClick={() => handleSearchTypeChange("character")}>Character</button>
+                        <button className="w-full text-left p-2" onClick={() => handleSearchTypeChange("anime")}>Anime</button>
+                        <button className="w-full text-left p-2" onClick={() => handleSearchTypeChange("character")}>Character</button>
                     </div>
                 </div>
                 <input 
