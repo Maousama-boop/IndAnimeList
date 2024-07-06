@@ -10,7 +10,7 @@ const Page = async ({ params }) => {
     <>
       <section>
         <Header title={`Pencarian Character '${decodedKeyword}'`}/>
-        <IndAnimeList api={searchAnime}/>
+        <IndCharacterList api={searchAnime}/>
       </section>
     </>
   );
