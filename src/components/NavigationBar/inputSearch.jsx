@@ -1,37 +1,51 @@
 "use client"
 
 import { MagnifyingGlass, X } from "@phosphor-icons/react"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 
 const InputSearch = () => {
     const searchRef = useRef()
     const router = useRouter()
+    const [keyword, setKeyword] = useState("")
+
+    const handleInputChange = (event) => {
+        setKeyword(event.target.value)
+    }
+
     const handleSearch = (event) => {
-        const keyword = searchRef.current.value
-        if(!keyword) return
-        if(event.key === "Enter" || event.type === "click"){
+        if (!keyword) return
+        if (event.key === "Enter" || event.type === "click") {
             event.preventDefault()
             router.push(`/search/${keyword}`)
         }
     }
+
     const hapusPencarian = () => {
-      if(searchRef.current){
-        searchRef.current.value = ""
-      }
+        setKeyword("")
+        if (searchRef.current) {
+            searchRef.current.value = ""
+        }
     }
 
     return (
         <div className="relative text-color-dark">
-             <input placeholder="Cari Anime.." className="w-full p-2 rounded outline-none" ref={searchRef} onKeyDown={handleSearch}/>
-             <button className="absolute top-2 end-2" onClick={handleSearch}>
+            <input 
+                placeholder="Cari Anime.." 
+                className="w-full p-2 rounded outline-none" 
+                ref={searchRef} 
+                onKeyDown={handleSearch} 
+                onChange={handleInputChange} 
+                value={keyword}
+            />
+            <button className="absolute top-2 end-2" onClick={handleSearch}>
                 <MagnifyingGlass size={24} />
-             </button>
-             {searchRef.current && searchRef.current.value ? (
-             <button className="absolute top-2 end-10" onClick={hapusPencarian}>
-                <X size={24} />
-             </button>
-             ) : null }
+            </button>
+            {keyword && (
+                <button className="absolute top-2 end-10" onClick={hapusPencarian}>
+                    <X size={24} />
+                </button>
+            )}
         </div>
     )
 }
