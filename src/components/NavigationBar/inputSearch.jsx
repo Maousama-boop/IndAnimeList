@@ -17,7 +17,7 @@ const InputSearch = () => {
         if (!keyword) return
         if (event.key === "Enter" || event.type === "click") {
             event.preventDefault()
-            router.push(`/search/${keyword}`)
+            router.push(`/search/anime/${keyword}`)
         }
     }
 
