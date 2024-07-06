@@ -34,7 +34,7 @@ const InputSearch = () => {
     }
 
     return (
-        <div className="relative text-color-dark bg-color-primary rounded-r">
+        <div className="relative text-color-dark bg-color-primary rounded-2xl">
             <div className="flex">
                 <div className="relative border-r-2 border-color-dark">
                     <button className="p-2 rounded-l" onClick={() => handleSearchTypeChange(searchType === "anime" ? "character" : "anime")}>
@@ -47,7 +47,7 @@ const InputSearch = () => {
                 </div>
                 <input 
                     placeholder={`Cari ${searchType.charAt(0).toUpperCase() + searchType.slice(1)}...`} 
-                    className="w-full p-2  outline-none bg-color-primary" 
+                    className="w-full p-2 outline-none bg-color-primary" 
                     ref={searchRef} 
                     onKeyDown={handleSearch} 
                     onChange={handleInputChange} 
