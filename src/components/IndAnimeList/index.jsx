@@ -9,7 +9,7 @@ interface IndAnimeListProps {
       title: string,
       images: {
         webp: {
-          image_url: string,
+          image_url: string
         },
       },
     }>
