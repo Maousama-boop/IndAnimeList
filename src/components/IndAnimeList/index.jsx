@@ -1,27 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import React from 'react';
 
-interface IndAnimeListProps {
-  api: {
-    data: Array<{
-      mal_id: number,
-      title: string,
-      images: {
-        webp: {
-          image_url: string
-        },
-      },
-    }>
-  },
-}
-const IndAnimeList: React.RF<IndAnimeListProps> = ({api}) => {
+const IndAnimeList = ({api}) => {
     return (
         <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 px-3">
-            {api.data?.map((anime, index) => {
+            {api.data?.map((anime) => {
                 return (
-                    <Link href={`/anime/${anime.mal_id}`}className="cursor-pointer text-color-primary hover:text-color-accent transition-all anime" key={index}>
-                        <Image src={anime.images.webp.image_url} alt="..." priority width={350} height={350} className="w-full max-h-64 rounded object-cover"/>
+                    <Link href={`/anime/${anime.mal_id}`}className="cursor-pointer text-color-primary hover:text-color-accent transition-all anime" key={anime.mal_id}>
+                        <Image src={anime.images.webp.image_url} alt="..." priority={true} width={350} height={350} className="w-full max-h-64 rounded object-cover"/>
                           <h3 className="font-bold md:text-x text-md text-center whitespace-nowrap overflow-hidden text-ellipsis">{anime.title}</h3>
                     </Link>
                 )    
