@@ -1,9 +1,12 @@
 import { IndAnimeList, IndCharacterList } from "../components/IndAnimeList"
 import Header from "../components/IndAnimeList/Header"
-import { getAnimeResponse } from "./libs/api-libs"
+import { getAnimeResponse, getNestedDataResponse } from "../libs/api-libs"
+
 
 const Page = async () => {
   const topAnime = await getAnimeResponse("top/anime", "limit=10")
+  let rekomendAnime = await getNestedDataResponse("recommendations/anime", "entry")
+  rekomendAnime = { data: rekomendAnime}
   const topCharacter = await getAnimeResponse("top/characters", "limit=10")
 
   return (
@@ -15,6 +18,10 @@ const Page = async () => {
       <section>
         <Header title="Character Populer" linkTitle="Lihat Semua" linkHref="/populer/character"/>
         <IndCharacterList api={topCharacter}/>
+      </section>
+      <section>
+        <Header title="Rekomendasi Anime"/>
+        <IndAnimeList api={rekomendAnime}/>
       </section>
     </>
   );
