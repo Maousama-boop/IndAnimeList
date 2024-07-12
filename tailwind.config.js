@@ -18,7 +18,8 @@ module.exports = {
         primary: '#eeeeee',
         accent: '#2563EB ',
         secondary: '#393e46',
-        dark: '#222831'
+        dark: '#222831',
+        red: '#ff0a0a'
       }
     }
   },
