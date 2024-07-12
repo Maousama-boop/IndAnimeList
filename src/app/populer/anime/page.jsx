@@ -1,12 +1,13 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import HeaderPopuler from "../../../components/Utilities/HeaderPopuler"
+import React, { useEffect, useState } from "react"
 import Pagination from "../../../components/Utilities/Pagination"
-import { IndAnimeList, IndCharacterList } from "../../../components/IndAnimeList"
-import { getAnimeResponse } from "../../libs/api-libs"
+import HeaderPopuler from "../../../components/Utilities/HeaderPopuler"
+import { IndAnimeList } from "../../../components/IndAnimeList"
+import { getAnimeResponse } from "../../../libs/api-libs"
 
-const AnimePopuler = () => {
+
+const Page = () => {
     const [page, setPage] = useState(1)
     const [topAnime, setTopAnime] = useState([])
 
@@ -18,14 +19,14 @@ const AnimePopuler = () => {
     useEffect(() => {
         fetchData()
     }, [page])
-    
+
     return (
         <>
             <HeaderPopuler title={`Anime Populer #${page}`}/>
-            <IndAnimeList api={topAnime}/>
-            <Pagination page={page} lastPage={topAnime.pagination?.last_visible_page} setPage={setPage}/> 
+            <IndAnimeList api={topAnime} />
+            <Pagination page={page} lastPage={topAnime.pagination?.last_visible_page} setPage={setPage} />
         </>
     )
 }
 
-export default AnimePopuler
+export default Page
