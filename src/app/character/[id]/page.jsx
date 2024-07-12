@@ -1,4 +1,4 @@
-import { getAnimeResponse } from "../../libs/api-libs"
+import { getAnimeResponse } from "../../../libs/api-libs"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -14,8 +14,8 @@ const Page = async({params: {id}}) => {
                 null
                 }
             </div>
-            <div className="px-3 pt-3 flex sm:flex-nowrap flex-wrap gap-3 text-color-primary">
-            <Image src={animeCharacter.data.images.webp.image_url} alt={animeCharacter.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded-md w-full"/>
+            <div className="px-3 pt-3 flex justify-center sm:flex-nowrap flex-wrap gap-3 text-color-primary">
+            <Image src={animeCharacter.data.images.webp.image_url} alt={animeCharacter.data.images.jpg.image_url} height={250} width={250} className="object-cover rounded-xl w-52 md:w-56 h-full"/>
             <p className="text-justify sm:text-x text-sm font-semibold capitalize">{animeCharacter.data.about}</p>
             </div>
         </>
