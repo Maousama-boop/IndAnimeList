@@ -8,12 +8,21 @@
     box-sizing: border-box;
 }
 
-.anime img{
+.anime{
     transition: .3s ease all;
 }
 
-.anime:hover img{
+.anime:hover{
     scale: 105%;
+}
+
+.character{
+  transition: .3s ease all;
+  scale: 105%;
+}
+
+.character:hover{
+  scale: 110%;
 }
 
 .overlay{
