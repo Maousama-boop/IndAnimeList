@@ -1,6 +1,7 @@
-import { IndAnimeList, IndCharacterList } from "../../../../components/IndAnimeList"
+import { IndCharacterList } from "../../../../components/IndAnimeList"
 import Header from "../../../../components/IndAnimeList/Header"
-import { getAnimeResponse } from "../../../libs/api-libs"
+import { getAnimeResponse } from "../../../../libs/api-libs"
+
 
 const Page = async ({ params }) => {
   const { keyword } = params
@@ -13,7 +14,7 @@ const Page = async ({ params }) => {
         <IndCharacterList api={searchCharacter}/>
       </section>
     </>
-  );
+  )
 }
 
 export default Page
