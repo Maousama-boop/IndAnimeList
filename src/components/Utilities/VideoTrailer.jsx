@@ -18,13 +18,13 @@ const VideoTrailer = ({trailerId}) => {
 
     const Player = () => {
         return(
-            <div className="fixed bottom-0 right-0">
+            <div className="fixed md:bottom-3 bottom-2 md:right-3 right-2">
                 <button onClick={handleTrailerButton} className="text-color-primary hover:text-color-red transition-all float-right p-2 m-2 bg-color-secondary rounded-full"><X size={30} /></button>
                 <Youtube
                 videoId={trailerId} 
                 onReady={(event) => event.target.pauseVideo()}
                 opts={option}
-                onError={() => alert("Trailer Anime Tidak Ada. Coba Trailer Anime Yang Lain.")}
+                onError={() => alert("Trailer Anime Tidak Ada.")}
                 />
             </div>
         )
