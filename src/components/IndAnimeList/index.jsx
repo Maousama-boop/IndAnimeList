@@ -10,7 +10,7 @@ const IndAnimeList = ({api}) => {
                         <Image src={anime.images.webp.image_url} alt="..." width={350} height={350} priority className="w-full h-full object-cover anime"/>
                         <div className="absolute bottom-0 w-full text-center p-2 box-border overlay">
                           <p className="whitespace-normal md:text-sm text-base text-start">Rank #{anime.rank}</p>
-                          <h3 className="md:text-x text-md text-start pb-0 whitespace-nowrap overflow-hidden text-ellipsis font-bold">{anime.title}</h3>
+                          <h3 className="md:text-lg text-xl text-start pb-0 whitespace-nowrap overflow-hidden text-ellipsis font-bold">{anime.title}</h3>
                         </div>
                     </Link>
                 )    
@@ -27,7 +27,7 @@ const IndCharacterList = ({api}) => {
                         <Image src={character.images.webp.image_url} alt="..." width={350} height={350} priority className="w-full h-full object-cover character"/>
                         <div className="absolute bottom-0 w-full text-center p-2 box-border overlay">
                           <p className="whitespace-normal md:text-sm text-base text-start">favorit #{character.favorites}</p>
-                          <h3 className="md:text-x text-md text-start  pb-0 whitespace-nowrap overflow-hidden text-ellipsis font-bold">{character.name}</h3>
+                          <h3 className="md:text-lg text-xl text-start  pb-0 whitespace-nowrap overflow-hidden text-ellipsis font-bold">{character.name}</h3>
                         </div>
                     </Link>
                 )    
@@ -35,4 +35,20 @@ const IndCharacterList = ({api}) => {
         </div>
     )
 }
-export { IndAnimeList, IndCharacterList }
+const IndAnimeRecommend = ({api}) => {
+    return (
+        <div className="grid grid-cols-2 md:gap-2 gap-1 md:px-7 px-4">
+            {api.data?.map((animeRecommend) => {
+                return (
+                    <Link href={`/anime/${animeRecommend.mal_id}`}className="relative overflow-hidden cursor-pointer text-color-primary hover:text-color-accent transition-all rounded-xl" key={animeRecommend.mal_id}>
+                        <Image src={animeRecommend.images.webp.image_url} alt="..." width={350} height={350} priority className="w-full h-full object-cover anime"/>
+                        <div className="absolute bottom-0 w-full text-center p-2 box-border overlay">
+                          <h3 className="md:text-lg text-xl text-start pb-0 whitespace-nowrap overflow-hidden text-ellipsis font-bold">{animeRecommend.title}</h3>
+                        </div>
+                    </Link>
+                )    
+            })}
+        </div>
+    )
+}
+export { IndAnimeList, IndCharacterList, IndAnimeRecommend }
