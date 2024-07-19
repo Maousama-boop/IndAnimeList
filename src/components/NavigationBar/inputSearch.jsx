@@ -57,7 +57,7 @@ const InputSearch = () => {
                 <MagnifyingGlass size={24} />
             </button>
             {keyword && (
-                <button className="absolute top-2 end-11 bg-color-primary" onClick={hapusPencarian}>
+                <button className="top-2 end-11 bg-color-primary" onClick={hapusPencarian}>
                     <X size={24} />
                 </button>
             )}
