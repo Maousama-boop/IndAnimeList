@@ -46,12 +46,6 @@
     to {transform: rotate(1turn)}
 }
 
-.no-scrollbar {
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
