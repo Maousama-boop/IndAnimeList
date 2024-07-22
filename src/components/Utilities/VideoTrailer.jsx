@@ -24,7 +24,7 @@ const VideoTrailer = ({trailerId}) => {
                 videoId={trailerId} 
                 onReady={(event) => event.target.pauseVideo()}
                 opts={option}
-                onError={() => alert("Trailer Anime Tidak Ada.")}
+                onError={() => alert("Trailer Anime Tidak Tersedia.")}
                 />
             </div>
         )
