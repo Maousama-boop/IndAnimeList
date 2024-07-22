@@ -6,7 +6,7 @@ export const getAnimeResponse = async(resource, query) => {
 
 export const getNestedDataResponse = async(resource, objectProperty) => {
     const response = await getAnimeResponse(resource)
-    return response.data.flatMap(data => data[objectProperty])
+    return response.data.map(data => data[objectProperty]).flat()
 }
 
 export const reproduce = (data, gap) => {
