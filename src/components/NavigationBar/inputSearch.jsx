@@ -53,14 +53,18 @@ const InputSearch = () => {
                     onChange={handleInputChange} 
                     value={keyword}
                 />
-            <button className="mr-3" onClick={handleSearch}>
-                <MagnifyingGlass size={24} />
-            </button>
-            {keyword && (
-                <button className="top-2 end-11 bg-color-primary" onClick={hapusPencarian}>
+            {keyword ?
+                <button className="top-2 end-12 bg-color-primary opacity-100" onClick={hapusPencarian}>
                     <X size={24} />
                 </button>
-            )}
+                :
+                <button className="top-2 end-12 bg-color-primary opacity-0" onClick={hapusPencarian}>
+                    <X size={24} />
+                </button>
+            }
+            <button className="mr-2" onClick={handleSearch}>
+                <MagnifyingGlass size={24} />
+            </button>
             </div>
         </div>
     )
