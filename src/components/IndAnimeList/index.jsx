@@ -39,11 +39,11 @@ const IndCharacterList = ({api}) => {
 }
 const IndAnimeRecommend = ({api}) => {
     return (
-        <div className="grid grid-cols-2 md:gap-2 gap-1 md:px-7 px-4">
+        <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 md:gap-2 gap-1 md:px-7 px-4">
             {api.data?.map((animeRecommend) => {
                 return (
                     <Link href={`/anime/${animeRecommend.mal_id}`} className="relative overflow-hidden cursor-pointer text-color-primary hover:text-color-accent transition-all rounded-xl" key={animeRecommend.mal_id}>
-                        <Image src={animeRecommend.images.webp.image_url} alt="..." width={350} height={350} priority className="w-full h-full object-cover anime"/>
+                        <Image src={animeRecommend.images.webp.large_image_url} alt="..." width={350} height={350} priority className="w-full h-full object-cover anime"/>
                         <div className="absolute bottom-0 w-full text-center p-2 box-border overlay">
                           <h3 className="md:text-lg text-xl text-start pb-0 whitespace-nowrap overflow-hidden text-ellipsis font-bold">{animeRecommend.title}</h3>
                         </div>
