@@ -7,10 +7,6 @@ export const authOption = {
         githubAuth({
             clientId: process.env.GITHUB_CLIENT,
             clientSecret: process.env.GITHUB_SECRET
-        }),
-        googleAuth({
-            clientId: process.env.GOOGLE_CLIENT,
-            clientSecret: process.env.GOOGLE_SECRET
         })
     ],
     secret: process.env.NEXTAUTH_SECRET
