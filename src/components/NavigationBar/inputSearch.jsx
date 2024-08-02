@@ -54,11 +54,11 @@ const InputSearch = () => {
                     value={keyword}
                 />
             {keyword ?
-                <button className="top-2 end-12 bg-color-primary opacity-100" onClick={hapusPencarian}>
+                <button className="bg-color-primary opacity-100" onClick={hapusPencarian}>
                     <X size={24} />
                 </button>
                 :
-                <button className="top-2 end-12 bg-color-primary opacity-0" onClick={hapusPencarian}>
+                <button className="bg-color-primary opacity-0" onClick={hapusPencarian}>
                     <X size={24} />
                 </button>
             }
